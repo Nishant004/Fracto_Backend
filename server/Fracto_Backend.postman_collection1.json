@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "fb65c1e6-6e3a-4317-9404-263612c795dc",
+		"name": "Fracto_Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32789022"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullName",
+							"value": "BHAGAT ",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Adar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Ad@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789abc",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/HONEYX/Desktop/anime-7959691_960_720.webp"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "9102954652",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "He is valuable customer",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/api/v1/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"ads@gmail.com\",\r\n    \"username\" : \"adarsha\",\r\n    \"password\" : \"123456789abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8000/api/v1/users/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "refresh_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8000/api/v1/users/refresh-token"
+			},
+			"response": []
+		},
+		{
+			"name": "sessions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/v1/users/sessions"
+			},
+			"response": []
+		},
+		{
+			"name": "online-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/v1/users/online-users"
+			},
+			"response": []
+		}
+	]
+}
